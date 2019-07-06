@@ -11,6 +11,35 @@
   height: 100vh;
 
   .content {
-    padding: 3rem;
+    // padding: 3rem;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .countdown {
+      filter: blur(0);
+      display: flex;
+      div {
+        padding: 0 20px;
+
+        border-right: 0.5px solid;
+        h3 {
+          font-size: 1.6rem;
+          margin: 0;
+          padding: 0;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
   }
 }
