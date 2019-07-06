@@ -10,9 +10,13 @@ function illustrationResolver(name) {
     case 'development':
       return 'https://react-coming-soon.maksv.me/under-development.png';
     case 'react':
-      return '';
+      return 'https://react-coming-soon.maksv.me/react.svg';
+    case 'git':
+      return 'https://react-coming-soon.maksv.me/git.svg';
+    case 'planning':
+      return 'https://react-coming-soon.maksv.me/planning.svg';
     case 'web-development':
-      return '';
+      return 'https://react-coming-soon.maksv.me/web-development.svg';
     default:
       return name;
   }
