@@ -29,3 +29,4 @@ class Example extends Component {
 ## License
 
 MIT © [maks112v](https://github.com/maks112v)
+# react-coming-soon

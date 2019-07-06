@@ -1,22 +1,21 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import styles from './styles.css'
+import styles from './index.scss';
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
+export default function ComingSoon({ image, bgColor, bgText, textColor }) {
+  return (
+    <section
+      className={styles.fullpage}
+      style={{
+        backgroundImage: image ? `url(${image})` : '',
+        backgroundColor: bgColor ? bgColor : '#fff',
+        color: textColor ? textColor : '#000',
+      }}
+    >
+      <div className={styles.content}>
+        <h1>asdfasdf</h1>
       </div>
-    )
-  }
+    </section>
+  );
 }
