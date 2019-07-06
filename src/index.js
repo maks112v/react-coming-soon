@@ -5,7 +5,27 @@ import Countdown from 'react-countdown-now';
 
 import styles from './index.scss';
 
-export default function ComingSoon({ image, bgColor, textColor, ...rest }) {
+function illustrationResolver(name) {
+  switch (name) {
+    case 'development':
+      return 'https://react-coming-soon.maksv.me/under-development.png';
+    case 'react':
+      return '';
+    case 'web-development':
+      return '';
+    default:
+      return name;
+  }
+}
+
+export default function ComingSoon({
+  image,
+  bgColor,
+  textColor,
+  illustration,
+  title,
+  ...rest
+}) {
   console.log(rest);
   return (
     <section
@@ -18,8 +38,8 @@ export default function ComingSoon({ image, bgColor, textColor, ...rest }) {
     >
       <div className={styles.content}>
         <div>
-          <h1>Coming Soon</h1>
-          <h3>Stay Tuned</h3>
+          <img src={illustrationResolver(illustration)} />
+          <h1>{title ? title : 'Coming Soon'}</h1>
           <Countdown
             date={Date.now() + 1000000000}
             renderer={props => (
