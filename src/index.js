@@ -28,6 +28,8 @@ export default function ComingSoon({
   textColor,
   illustration,
   title,
+  date,
+  children,
   ...rest
 }) {
   console.log(rest);
@@ -44,31 +46,36 @@ export default function ComingSoon({
         <div>
           <img src={illustrationResolver(illustration)} />
           <h1>{title ? title : 'Coming Soon'}</h1>
-          <Countdown
-            date={Date.now() + 1000000000}
-            renderer={props => (
-              <div className={styles.countdown}>
-                {props.days ? (
+          {children}
+          {date ? (
+            <Countdown
+              date={date}
+              renderer={props => (
+                <div className={styles.countdown}>
+                  {props.days ? (
+                    <div
+                      style={{ borderColor: textColor ? textColor : '#000' }}
+                    >
+                      <h3>{props.days}</h3>
+                      <p>Days</p>
+                    </div>
+                  ) : null}
                   <div style={{ borderColor: textColor ? textColor : '#000' }}>
-                    <h3>{props.days}</h3>
-                    <p>Days</p>
+                    <h3>{props.hours}</h3>
+                    <p>Hours</p>
                   </div>
-                ) : null}
-                <div style={{ borderColor: textColor ? textColor : '#000' }}>
-                  <h3>{props.hours}</h3>
-                  <p>Hours</p>
+                  <div style={{ borderColor: textColor ? textColor : '#000' }}>
+                    <h3>{props.minutes}</h3>
+                    <p>Minutes</p>
+                  </div>
+                  <div style={{ borderColor: textColor ? textColor : '#000' }}>
+                    <h3>{props.seconds}</h3>
+                    <p>Seconds</p>
+                  </div>
                 </div>
-                <div style={{ borderColor: textColor ? textColor : '#000' }}>
-                  <h3>{props.minutes}</h3>
-                  <p>Minutes</p>
-                </div>
-                <div style={{ borderColor: textColor ? textColor : '#000' }}>
-                  <h3>{props.seconds}</h3>
-                  <p>Seconds</p>
-                </div>
-              </div>
-            )}
-          />
+              )}
+            />
+          ) : null}
         </div>
       </div>
     </section>

@@ -1,18 +1,157 @@
-import React, { Component } from 'react';
+import React, { useState, Fragment } from 'react';
 
 import ComingSoon from 'react-coming-soon';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <ComingSoon
-          // image="https://react-coming-soon.maksv.me/default-image.jpeg"
-          bgColor="#fff"
-          textColor="#000"
-          illustration="development"
-        />
+import './index.css';
+
+import {
+  MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBView,
+  MDBContainer,
+  MDBIcon,
+  MDBFooter,
+} from 'mdbreact';
+import { stat } from 'fs';
+
+export default function App() {
+  const [state, setstate] = useState({
+    demo: false,
+    generateDemo: false,
+    comingSoon: {
+      image: 'https://react-coming-soon.maksv.me/default-image.jpeg',
+      bgColor: '#fff',
+      textColor: '#fff',
+      illustration: '',
+      date: Date.now() + 1000000000,
+    },
+    demoComingSoon: {
+      image: 'https://react-coming-soon.maksv.me/default-image.jpeg',
+      bgColor: '#fff',
+      textColor: '#fff',
+      illustration: '',
+    },
+  });
+
+  console.log(state);
+  return (
+    <React.Fragment>
+      {state.demo ? (
+        <ComingSoon {...state.comingSoon}>
+          <MDBBtn
+            color="danger"
+            onClick={() => setstate({ ...state, demo: false })}
+          >
+            Close Demo
+          </MDBBtn>
+        </ComingSoon>
+      ) : null}
+      {state.generateDemo ? (
+        <ComingSoon {...state.demoComingSoon}>
+          <MDBBtn
+            color="danger"
+            onClick={() => setstate({ ...state, generateDemo: false })}
+          >
+            Close Demo
+          </MDBBtn>
+        </ComingSoon>
+      ) : null}
+      <div id="apppage">
+        <MDBView>
+          <MDBMask className="d-flex justify-content-center align-items-center gradient">
+            <MDBContainer>
+              <MDBRow>
+                <div className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5">
+                  <h1 className="h1-responsive font-weight-bold mt-sm-5">
+                    React Coming Soon Page
+                  </h1>
+                  <hr className="hr-light" />
+                  <h6 className="mb-4">
+                    Simple way to add a <b>Coming Soon</b> page to your next
+                    react project.
+                  </h6>
+                  <MDBBtn
+                    color="success"
+                    onClick={() => setstate({ ...state, demo: true })}
+                  >
+                    Demo
+                  </MDBBtn>
+                  <MDBBtn
+                    outline
+                    color="white"
+                    href="https://www.npmjs.com/package/react-coming-soon"
+                  >
+                    Get Started with NPM
+                  </MDBBtn>
+                </div>
+                <MDBCol md="6" xl="5" className="mt-xl-5">
+                  <img src="/leading.png" alt="" className="img-fluid" />
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBMask>
+        </MDBView>
       </div>
-    );
-  }
+      <MDBContainer>
+        <section className="text-center my-5">
+          <h2 className="h1-responsive font-weight-bold my-5">
+            What is react coming soon?
+          </h2>
+          <p className="lead grey-text w-responsive mx-auto mb-5">
+            It's a simple and customizable starter page to let others know you
+            are working.
+          </p>
+          <MDBRow>
+            <MDBCol md="4">
+              <MDBIcon far icon="envelope" size="3x" className="blue-text" />
+              <h5 className="font-weight-bold my-4">Collect Emails</h5>
+              <p className="grey-text mb-md-0 mb-5">
+                Give customers link to a current website or collect their emails
+                with needing to build a new component. Get a mailing list before
+                you launch your project.
+              </p>
+            </MDBCol>
+            <MDBCol md="4">
+              <MDBIcon icon="hands-helping" size="3x" className="cyan-text" />
+              <h5 className="font-weight-bold my-4">Benefits</h5>
+              <p className="grey-text mb-md-0 mb-5">
+                Let us know what's going on and increase transparency. Let
+                customers see a launch date or more information.
+              </p>
+            </MDBCol>
+            <MDBCol md="4">
+              <MDBIcon icon="code" size="3x" className="red-text" />
+              <h5 className="font-weight-bold my-4">How it works</h5>
+              <p className="grey-text mb-md-0 mb-5">
+                When ever you place this component anywhere on the page it will
+                cover any thing and show a coming soon page. This cover can be
+                removed so make sure to not show any data behind it.
+              </p>
+            </MDBCol>
+          </MDBRow>
+        </section>
+        <section className="text-center my-5">
+          <h2 className="h1-responsive font-weight-bold my-5">
+            Generate A Coming Soon Page
+          </h2>
+          <MDBBtn
+            color="info"
+            onClick={() => setstate({ ...state, generateDemo: true })}
+          >
+            Live Demo
+          </MDBBtn>
+        </section>
+      </MDBContainer>
+      <MDBFooter className="font-small mt-4">
+        <div className="footer-copyright text-center py-3">
+          <MDBContainer fluid>
+            &copy; {new Date().getFullYear()} Created by:
+            <a href="https://maksv.me/"> maksv.me </a>
+          </MDBContainer>
+        </div>
+      </MDBFooter>
+    </React.Fragment>
+  );
 }

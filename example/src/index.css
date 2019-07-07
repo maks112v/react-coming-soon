@@ -1,5 +1,24 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+#apppage .gradient {
+  background: linear-gradient(
+    45deg,
+    rgba(33, 33, 33, 0.4),
+    rgba(33, 33, 33, 0.6) 100%
+  );
+}
+
+#apppage .view {
+  background-image: url('https://react-coming-soon.maksv.me/default-image.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+#apppage h1 {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+
+#apppage h6 {
+  line-height: 1.7;
 }

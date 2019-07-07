@@ -2,9 +2,10 @@
 
 .fullpage {
   font-family: 'Poppins', sans-serif;
+  z-index: 9999;
   padding: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   background-size: cover;
   background-position: center;
   width: 100%;
