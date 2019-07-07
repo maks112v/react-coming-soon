@@ -28,6 +28,7 @@ export default function ComingSoon({
   textColor,
   illustration,
   title,
+  subtitle,
   date,
   children,
   ...rest
@@ -46,6 +47,7 @@ export default function ComingSoon({
         <div>
           <img src={illustrationResolver(illustration)} />
           <h1>{title ? title : 'Coming Soon'}</h1>
+          <p>{subtitle}</p>
           {children}
           {date ? (
             <Countdown
