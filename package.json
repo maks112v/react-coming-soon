@@ -1,6 +1,6 @@
 {
   "name": "react-coming-soon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components for you new project",
   "author": "maks112v",
   "license": "MIT",
@@ -61,5 +61,14 @@
   "dependencies": {
     "node-sass": "^4.12.0",
     "react-countdown-now": "^2.1.1"
-  }
+  },
+  "keywords": [
+    "coming",
+    "soon",
+    "coming-soon",
+    "placeholder",
+    "countdown",
+    "email",
+    "illustrations"
+  ]
 }

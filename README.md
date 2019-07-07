@@ -13,20 +13,24 @@ npm install --save react-coming-soon
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react';
 
-import MyComponent from 'react-coming-soon'
+import ComingSoon from 'react-coming-soon';
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+export default function App() {
+  return (
+    <ComingSoon
+      image="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2110&q=80"
+      bgColor="#fff"
+      textColor="#000"
+      illustration="development"
+    />
+  );
 }
 ```
 
 ## License
 
 MIT © [maks112v](https://github.com/maks112v)
+
 # react-coming-soon
