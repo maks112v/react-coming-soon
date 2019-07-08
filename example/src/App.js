@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 
 import ComingSoon from 'react-coming-soon';
 import { TwitterPicker } from 'react-color';
@@ -42,7 +42,7 @@ export default function App() {
   });
 
   return (
-    <React.Fragment>
+    <div>
       {state.demo ? (
         <ComingSoon {...state.comingSoon}>
           <MDBBtn
@@ -91,9 +91,6 @@ export default function App() {
                     Get Started with NPM
                   </MDBBtn>
                 </div>
-                <MDBCol md="6" xl="5" className="mt-xl-5">
-                  <img src="/leading.png" alt="" className="img-fluid" />
-                </MDBCol>
               </MDBRow>
             </MDBContainer>
           </MDBMask>
@@ -241,6 +238,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/404.svg"
                       style={{ width: '100%' }}
+                      alt="404 SVG"
                     />
                     <p>None</p>
                   </div>
@@ -257,6 +255,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/under-development.png"
                       style={{ width: '100%' }}
+                      alt="Under Development"
                     />
                     <p>Under Development</p>
                   </div>
@@ -273,6 +272,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/react.svg"
                       style={{ width: '100%' }}
+                      alt="React SVG"
                     />
                     <p>React</p>
                   </div>
@@ -289,6 +289,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/git.svg"
                       style={{ width: '100%' }}
+                      alt="Github"
                     />
                     <p>Github</p>
                   </div>
@@ -305,6 +306,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/planning.svg"
                       style={{ width: '100%' }}
+                      alt="Planning SVG"
                     />
                     <p>Planning</p>
                   </div>
@@ -321,6 +323,7 @@ export default function App() {
                     <img
                       src="https://react-coming-soon.maksv.me/web-development.svg"
                       style={{ width: '100%' }}
+                      alt="Web Development SVG"
                     />
                     <p>Web Development</p>
                   </div>
@@ -369,6 +372,6 @@ export default function App() {
           </MDBContainer>
         </div>
       </MDBFooter>
-    </React.Fragment>
+    </div>
   );
 }
