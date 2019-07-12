@@ -36,7 +36,8 @@ export default function App() {
 ## Versions
 
 - 1.0.3 - Create config with Website
-- 1.0.4 - Add Custom Styles
+- 1.0.4 - Read me Updat
+- 1.0.5 - Add Custom Styles
 
 ## License
 
