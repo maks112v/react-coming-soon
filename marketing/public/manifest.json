@@ -1,6 +1,6 @@
 {
-  "short_name": "react-coming-soon",
-  "name": "react-coming-soon",
+  "short_name": "React Coming Soon",
+  "name": "coming-soon",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
