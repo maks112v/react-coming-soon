@@ -1,7 +1,7 @@
 {
   "name": "react-coming-soon",
-  "version": "1.0.5",
-  "description": "React components for you new project",
+  "version": "1.0.6",
+  "description": "Simple way to add a coming soon page to your next react project.",
   "author": "maks112v",
   "license": "MIT",
   "repository": "maks112v/react-coming-soon",
@@ -59,7 +59,7 @@
     "dist"
   ],
   "dependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "react-countdown-now": "^2.1.1"
   },
   "keywords": [

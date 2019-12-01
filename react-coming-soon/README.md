@@ -17,9 +17,9 @@ npm install --save react-coming-soon
 ## Usage
 
 ```jsx
-import React from 'react';
+import React from "react";
 
-import ComingSoon from 'react-coming-soon';
+import ComingSoon from "react-coming-soon";
 
 export default function App() {
   return (
@@ -36,8 +36,9 @@ export default function App() {
 ## Versions
 
 - 1.0.3 - Create config with Website
-- 1.0.4 - Read me Updat
+- 1.0.4 - Read me Update
 - 1.0.5 - Add Custom Styles
+- 1.0.6 - Fixed Mobile Styles
 
 ## License
 

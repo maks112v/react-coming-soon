@@ -1,9 +1,10 @@
 {
   "name": "marketing",
-  "version": "0.1.0",
+  "version": "1.0.6",
   "private": true,
   "dependencies": {
     "mdbreact": "^4.18.0",
+    "node-sass": "^4.13.0",
     "react": "^16.8.6",
     "react-color": "^2.17.3",
     "react-coming-soon": "^1.0.3",
